@@ -1,0 +1,226 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#home{
+    background-image: url("scroll pictures.jpg"), linear-gradient(rgb(156, 156, 247), rgb(0, 0, 255));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100%;
+}
+
+#about{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(156, 156, 247), rgb(0, 0, 255));
+}
+
+#services,
+#tours{
+    height: 80vh;
+    width: 100%;
+}
+nav{
+    background: white;
+    padding: 1rem 1.5rem;
+}
+
+.fixed-nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+}
+
+.fixed-nav .links a {
+    color: grey;
+}
+
+.fixed-nav .links a:hover{
+    color: blue;
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    color: blue;
+    background-color: transparent;
+    border-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.logo{
+    height: 50px;
+}
+
+.links-container{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.show-links{
+    height:200px;
+}
+
+.links a{
+    background: white;
+    color: blue;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    display: block;
+    transition: 0.5s;
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.links a:hover{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.scroll-link.btn.btn-white{
+    padding: 10px  20px;
+    border: 2px solid whitesmoke;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+@media screen and (min-width:800px){
+    nav{
+        background: transparent;
+    }
+    .nav-center{
+        width:90vw;
+        max-width: 1170px;
+        margin:0 auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header{
+        padding: 0;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .links-container{
+        height: auto !important;
+    }
+    .links{
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+}
+
+.title h2{
+    text-align: center;
+    text-transform: uppercase
+}
+
+.title span{
+    color: var()
+}
+
+footer{
+    background-color: rgb(65, 63, 63);
+    padding: 5rem 1rem;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+
+.top-link{
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: blue;
+    color: white;
+    border: 2px solid white;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.show-links{
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.5s);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
